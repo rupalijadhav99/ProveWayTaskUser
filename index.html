@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOGO UI</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<div class="container">
+    <div class="lineDiv">
+        <div class="grayLine" style="width: 28%;"></div>
+        <div class="header">YAY! It's BOGO</div>
+        <div class="grayLine" style="width: 27%;"></div>
+    </div>
+    <div class="option" onclick="updateTotal(10, this)">
+        <div class="flex-container">
+            <div class="optionDiv">
+                <div class="borderInput"><input type="radio" name="unit" value="10" onclick="updateTotal(10, this)">
+                </div>
+                <label>1 Unit</label>
+                <span class="discount">10% Off</span>
+            </div>
+            <div class="standardPrice">Standard Price</div>
+            <div class="price-container">
+                <div class="discountValue">$10.00 USD</div>
+                <div class="originalValue">
+                    <div style="text-decoration: line-through; color: gray;">$24.00 USD</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="option most-popular" onclick="updateTotal(18, this)">
+        <div class="flex-container">
+            <div class="optionDiv">
+                <div class="borderInput"><input type="radio" name="unit" value="20" onclick="updateTotal(18, this)">
+                </div>
+                <label>2 Unit</label>
+                <span class="discount">20% Off</span>
+            </div>
+            <div class="price-container">
+                <div class="discountValue">$18.00 USD</div>
+                <div class="originalValue">
+                    <div style="text-decoration: line-through; color: gray;">$24.00 USD</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="option" onclick="updateTotal(24, this)">
+        <div class="flex-container">
+            <div class="optionDiv">
+                <div class="borderInput"><input type="radio" name="unit" value="30" onclick="updateTotal(24, this)">
+                </div>
+                <label>3 Unit</label>
+                <span class="discount">30% Off</span>
+            </div>
+            <div class="price-container">
+                <div class="discountValue">$24.00 USD</div>
+                <div class="originalValue">
+                    <div style="text-decoration: line-through; color: gray;">$24.00 USD</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottomDiv">
+        <div class="freeDelivery">Free Delivery</div>
+        <div class="total">Total: <span id="total">$00.00 USD</span></div>
+    </div>
+    <button class="btn" id="addToCart"><span class="addToCartSpan">+</span> Add to Cart</button>
+    <div class="footer">
+        <span>@ Powered by Pumper</span>
+    </div>
+</div>
+
+<div id="cartModal" class="modal">
+    <div class="modal-content">
+        <p id="modalMessage"></p>
+        <button id="closeModal">OK</button>
+    </div>
+</div>
+
+<script src="index.js"></script>
+</body>
+
+</html>
