@@ -31,6 +31,7 @@ const hideShowDiv = document.createElement('div');
         </div>
     `;
 
+
     function updateTotal(price, element) {
     document.getElementById('total').innerText = `$${price}.00 USD`;
     document.querySelectorAll('.hideShowDiv').forEach(div => div.remove());
@@ -38,6 +39,7 @@ const hideShowDiv = document.createElement('div');
     document.querySelectorAll('.option').forEach(option => {
         option.classList.remove('toAddBorder');
     });
+
 
     const parentOption = element.closest('.option');
 
